@@ -3,18 +3,22 @@
 <head>
   <link href="../css/myGamesInterface.css" rel="stylesheet" type="text/css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <style>
+    canvas {
+        text-align: center;
+        margin-top: 50px;
+        margin-left: 400px;
+    } 
+  </style>
 </head>
 <body>
 
 <ul>
-  <li><a href="../myGamesInterface.html">Home</a></li>
+  <li><a href="../myGamesInterface.html">Home / Instructions</a></li>
   <li><a class="active" href="myGamesInterfaceGame1.html">Snake Recreation</a></li>
   <li><a href="../driveTraining/myGamesInterfaceGame2.html">Drive Training</a></li>
-  <li><a href="../puzzleGame/myGamesInterfaceGame3.html">Jigsaw Puzzle</a></li>
+  <li><a href="../makeAPizza/myGamesInterfaceGame3.html">Make a Pizza</a></li>
 </ul>
-<section>
-    <h1>Snake Recreation</h1>    
-</section>
 <canvas id="myCanvas" width="560px" height="560px">
     Your browser does not support the HTML5 canvas tag.
 </canvas>
@@ -95,7 +99,6 @@
           }
 
           function imgs(background){
-              //ctx.drawImage(background, 0, 0, w, h);
               ctx.fillStyle = "white";
               ctx.fillRect(0, 0, w, h);
               ctx.strokeStyle = "black";
@@ -134,22 +137,10 @@
               
                 for(var i = 0; i < snake.length; i++){
                   var c = snake[i];
-                //   if(c == snake[0]){
-                //       paintSnakeHead(c.x,c.y);
-                //       this.ctx.drawImage(head,
-                //       this.x,
-                //       this.y,
-                //       this.width,
-                //       this.height)
 
-                //   }
-                //   else{
                     paintBlock(c.x,c.y);
-                //   }
                 }  
 
-
-            //   paintMouse(food.x, food.y);
               paintBlock(food.x, food.y);
               paintBadBlock0(badFood0.x, badFood0.y);
               paintBadBlock1(badFood1.x, badFood1.y);
@@ -159,22 +150,6 @@
               ctx.fillText(foodText, 5, h-5);
 
           }
-
-        //   function paintMouse(mouse, x , y){
-        //     food.ctx.drawImage(mouse, 
-        //     food.x, 
-        //     food.y,
-        //     this.width,
-        //     this.height);
-        //   }
-
-        //   function paintSnakeHead(head, x , y){
-        //     this.ctx.drawImage(head,
-        //     this.x,
-        //     this.y,
-        //     this.width,
-        //     this.height)
-        //   }
 
           function paintBlock(x,y){
 
